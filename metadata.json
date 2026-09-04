@@ -1,0 +1,6 @@
+{
+  "name": "Niki — Hermetic Multi-Agent Coding System",
+  "description": "Niki is a hermetic multi-agent coding system by Ravani Roshan. Isolated AI agents independently plan, code, test, and review software within Docker/Podman sandboxes, delivering clean reviewable Git branches.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niki — Hermetic Multi-Agent Coding System</title>
+    <meta name="description" content="Niki is a hermetic multi-agent coding system by Ravani Roshan. Isolated AI agents independently plan, code, test, and review software within Docker/Podman sandboxes." />
+    <meta property="og:title" content="Niki — Hermetic Multi-Agent Coding System" />
+    <meta property="og:description" content="Niki is a hermetic multi-agent coding system by Ravani Roshan. Isolated AI agents independently plan, code, test, and review software within Docker/Podman sandboxes." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400..700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pixelify+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function(){try{var v=localStorage.getItem('niki-theme')||localStorage.getItem('cmmnts-theme');
+if(v==='light'||v==='dark')document.documentElement.setAttribute('data-theme',v);}catch(e){}})();
+    </script>
+    <style>
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: #FAF8F5;
+        transition: opacity 0.2s ease-out;
+      }
+      [data-theme="dark"] #boot-loader {
+        background: #14130F;
+        color: #F2EFE8;
+      }
+      #boot-loader .wordmark {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: #1A1A1A;
+      }
+      [data-theme="dark"] #boot-loader .wordmark {
+        color: #F2EFE8;
+      }
+      #boot-loader .squares {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      #boot-loader .sq {
+        width: 5px;
+        height: 5px;
+        background-color: #E8642C;
+        animation: boot-loader-blink 900ms steps(2, end) infinite;
+      }
+      [data-theme="dark"] #boot-loader .sq {
+        background-color: #FF7A43;
+      }
+      #boot-loader .sq:nth-child(2) { animation-delay: 150ms; }
+      #boot-loader .sq:nth-child(3) { animation-delay: 300ms; }
+      @keyframes boot-loader-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot-loader .sq { animation: none; opacity: 0.6; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot-loader">
+      <div class="wordmark font-mono">niki</div>
+      <div class="squares">
+        <div class="sq"></div>
+        <div class="sq"></div>
+        <div class="sq"></div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
